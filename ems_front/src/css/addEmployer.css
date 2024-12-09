@@ -1,0 +1,153 @@
+/* Container Centering */
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    padding: 20px; /* Add padding around the container */
+    box-sizing: border-box; /* Ensure padding is included in the width/height */
+}
+
+/* Card Design */
+.custom-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: slide-in 0.8s ease-out;
+    width: 350px; /* Make the card a bit smaller */
+}
+.card{
+width: 80%;
+margin-right: 50px;
+}
+
+/* Form Title */
+.form-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Button */
+.submit-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: #5cb85c;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #4cae4c;
+}
+
+/* Animations */
+@keyframes slide-in {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.bounce:hover {
+    animation: bounce 0.5s ease-in-out infinite;
+}
+
+/* Titre animé */
+.page-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: slide-in-title 1s ease-out;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+/* Animation pour le soulignement */
+.page-title::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    background: #5cb85c;
+    left: 25%;
+    bottom: -8px;
+    animation: underline-grow 0.8s ease-out;
+}
+
+/* Animation du titre */
+@keyframes slide-in-title {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation de la ligne sous le titre */
+@keyframes underline-grow {
+    from {
+        width: 0;
+        left: 50%;
+    }
+    to {
+        width: 50%;
+        left: 25%;
+    }
+}
